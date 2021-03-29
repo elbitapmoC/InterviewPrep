@@ -1,4 +1,4 @@
-# InterviewPrep
+# Interview Prep
 - What’s the company doing right now or what’s the market scenario or technology they are working on currently. 
 - Data Structures 
 - Algorithms 
