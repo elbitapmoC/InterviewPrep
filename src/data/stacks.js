@@ -4,31 +4,30 @@
 // Peek - Displaying top element of a stack
 // Length - Determine how many elements in a stack.
 
-let letters = [];
+let stackOfLetters = [];
+let rword = '';
 
-let word = 'corn';
-let word_reversed = '';
-
-//iterates through the string
-function stackLetters() {
+function reverseLetters(word) {
   for (let i = 0; i < word.length; i++) {
-    letters.push(word[i]);
+    stackOfLetters.push(word[i]); // Push each letter onto the stack.
+  }
+
+  for (let i = 0; i < word.length; i++) {
+    rword += stackOfLetters.pop(); // Pops off the last letter of the array, it goes into the rword string..
   }
 }
 
-function popLetters() {
-  for (let i = 0; i < word.length; i++) {
-    // pops letters off letters array, letter is then added to word_reversed string
-    word_reversed += letters.pop();
-  }
+// split - Turns our string into an array of characters.
+// reverse - Reverses the order of the elements within an array.
+// join - Concatenates all the elements in an array.
+function simpleReverseLetters(word) {
+  return word.split('').reverse().join('');
 }
 
-function checkForPalindrome() {
-  stackLetters();
-  popLetters();
-  if (word === word_reversed) {
-    console.log(word + ' is a palindrome!');
-  } else console.log("Nope");
+function checkForPalindrome(word) {
+  simpleReverseLetters(word);
+  if (rword === word) console.log('PAL!');
+  else console.log('Bummer...');
 }
 
-checkForPalindrome();
+checkForPalindrome("LoL");
