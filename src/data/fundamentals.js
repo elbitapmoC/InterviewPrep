@@ -1,7 +1,4 @@
 // Data Structures(DS)
-// A way of efiiciently organizing data to be used effectively.
-// Key for creating fast & powerful algorithms.
-// Clean and easily understood code.
+// A way of organizing, managing & storing data.
+// Key for clean, modifiable and efficient code.
 
-// Abstract Data Type (ADT)
-//git 
