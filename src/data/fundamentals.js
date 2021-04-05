@@ -63,16 +63,54 @@ let elements = {
 
 // Make a copy of elements object and assign / add it on to the day1 object.
 Object.assign(day1, { elements }); // {} optional
-console.log(day1);
+// console.log(day1);
 
 let obj1 = { val: 10 };
 let obj2 = obj1;
 let obj3 = { val: 10 };
 
-console.log(obj1 == obj2); // true
-console.log(obj1 == obj3); // false, obj1 and obj3 are pointing to different objects
+// console.log(obj1 == obj2); // true
+// console.log(obj1 == obj3); // false, obj1 and obj3 are pointing to different objects
 
 let journal = [];
 function addEntry(events, squirrel) {
   journal.push({ events, squirrel }) // This is shorthand for events: events
 }
+
+// console.log(day1.events);
+
+// Shift - Removes an item from the beginning of an array.
+day1.events.shift();
+// console.log(day1.events);
+
+// Unshift - Adds an item to the beginning of the array
+day1.events.unshift('study');
+// console.log(day1.events);
+
+// Search through an array for the 1st instance of an element, starting at the front.
+// console.log([0, 1, 10, 100, 2, 20, 200, 0, 1, 10, 100, 2, 20, 200].indexOf(2));
+
+// Search through an array for the 1st instance of an element, starting at the end.
+// console.log([0, 1, 10, 100, 2, 20, 200, 0, 1, 10, 100, 2, 20, 200].lastIndexOf(2));
+
+newArrToTest = [0, 1, 10, 100, 2, 20, 200, 0, 1, 10, 100, 2, 20, 200];
+shrinkArr = newArrToTest.slice(2, 5); // starts at index 2, ends before index 5
+
+// console.log(shrinkArr);
+
+function rmv(arr, index) {
+  return arr.slice(0, index).
+    concat(arr.splice(index + 1)); // Since there's no end of the slice, it will start at index + 1 and end when the arr ends.
+}
+
+console.log(rmv(['a', 'b', 'c', 'd', 'e'], 2));
+
+// -----------------------------*
+// Stings
+// -----------------------------*
+
+// We can use the same methods used in arr, also inside strings.
+// split, slice, indexOf, etc.
+
+// Strings can be repeated
+console.log("LA".repeat(4));
