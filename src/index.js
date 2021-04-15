@@ -1,11 +1,17 @@
-function checkScope() {
-  let scope = 'Function scope'
-  let inside = true;
-  if (inside) {
-    let scope = 'IF / Conditional scope..';
-    console.log(scope);
-  }
-  console.log(scope);
-}
+function printManyTimes(str) {
+  "use strict";
 
-checkScope();
+  const SENTENCE = [
+    str,
+    {},
+    'candle'
+  ];
+  Object.freeze(SENTENCE)
+
+
+  for (let i = 0; i < str.length; i += 2) {
+    console.log(SENTENCE);
+  }
+
+}
+printManyTimes("freeCodeCamp");
