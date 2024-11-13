@@ -56,3 +56,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 3. **Advanced Topics**: Includes Virtual DOM, RESTful services, HOCs, and performance best practices.
 
 Each section and question has a brief answer, and assignments provide hands-on practice for mastering core skills.
+
+[Checkout the tasks](/Tasks.md) <!-- /create a link -->
